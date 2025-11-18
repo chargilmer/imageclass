@@ -1,15 +1,66 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <title> lab 10 </title>
     <script src="https://aframe.io/releases/1.7.1/aframe.min.js"> </script>
   </head>
   <body>
+    <a-assets> 
+      <img id="labpic" src="lab 12 pic.png">
+    </a-assets>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-sky src="#labpic"></a-sky>
+      <a-entity position="0 1.2 -3">
+        <a-cone 
+          position="0 0 0" 
+          radius-bottom="0.4"
+          radius-top="0.05"
+          height="0.8"
+          rotation="0 0 180"
+          color="#d2a679">
+        </a-cone>
+
+        <a-sphere 
+          position="0 0.6 0"
+          radius="0.35"
+          color="#ffb6c1"">
+        </a-sphere>
+      </a-entity>
+
+      <a-entity position="2 0.5 -3">
+
+        <a-cylinder 
+          height="1"
+          radius="0.8"
+          color="#e0c28a">
+        </a-cylinder>
+
+        <a-box 
+          position="0 0.75 0"
+          depth="0.6" height="0.4" width="0.6"
+          color="#d9b67c">
+        </a-box>
+
+        <a-cylinder 
+          position="-0.6 0.5 0"
+          height="0.6"
+          radius="0.25"
+          color="#d9b67c">
+        </a-cylinder>
+
+        <a-cylinder 
+          position="0.6 0.5 0"
+          height="0.6"
+          radius="0.25"
+          color="#d9b67c">
+        </a-cylinder>
+
+      </a-entity>
+
+      <a-entity camera look-controls position="0 1.6 0"></a-entity>
+
+  
     </a-scene>
   </body>
 </html>
