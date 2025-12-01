@@ -8,6 +8,7 @@
       <img id="finalpic" src="finalprojpic.png">
       <img id="fishtexture" src="preview16.jpg">
       <img id="coinface" src="coin.png">
+      <img id="fisheye" src="fisheye.png">
     </a-assets>
     <a-scene>
       <a-sky src="#finalpic"></a-sky>
@@ -29,11 +30,12 @@
         <a-cone radius-bottom="0.25" radius-top="0.0" height="0.5"
                 color="#ff7733"
                 position="-0.55 0 0"
-                rotation="0 0 90"></a-cone>
+                rotation="0 0 90"
+                src="#fishtexture"></a-cone>
 
         <!-- Eye -->
-        <a-sphere radius="0.07" position="0.25 0.1 0.3" color="#ffffff"></a-sphere>
-        <a-sphere radius="0.03" position="0.27 0.1 0.33" color="#000000"></a-sphere>
+        <a-sphere radius="0.07" position="0.25 0.1 0.3" color="#ffffff" src="#fisheye"></a-sphere>
+        <a-sphere radius="0.03" position="0.27 0.1 0.33" color="#ffffff" src="#fisheye"></a-sphere>
       </a-entity>
 
    
