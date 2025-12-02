@@ -5,10 +5,9 @@
   </head>
   <body>
      <a-assets> 
+      <a-asset-item id="whale" src="whale.obj"></a-asset-item>
       <img id="finalpic" src="finalprojpic.png">
-      <img id="fishtexture" src="preview16.jpg">
-      <img id="coinface" src="coin.png">
-      <img id="fisheye" src="fisheye.png">
+   
     </a-assets>
     <a-scene>
       <a-sky src="#finalpic"></a-sky>
@@ -18,36 +17,9 @@
 
       <a-entity light="type: ambient; color: #88ccee"></a-entity>
       <a-entity light="type: directional; intensity: 1" position="2 4 1"></a-entity>
+      <a-obj-model src="#whale" postion="-1 1 -3" scale="1 1 1"></a-obj-model>
 
-      <!-- 3D FISH -->
-      <a-entity id="fish" position="-1 1 -3" animation="property: rotation; to: 0 360 0; loop: true; dur: 6000; easing: linear">
 
-        <!-- Body -->
-        <a-sphere radius="0.4" src="#fishtexture"></a-sphere>
-
-        <!-- Tail -->
-        <a-cone radius-bottom="0.25" radius-top="0.0" height="0.5" src="#fishtexture"
-                position="-0.55 0 0"
-                rotation="0 0 90"
-                src="#fishtexture"></a-cone>
-
-        <!-- Eye -->
-        <a-sphere radius="0.07" position="0.25 0.1 0.3" src="#fisheye"></a-sphere>
-        <a-sphere radius="0.03" position="0.27 0.1 0.33" src="#fisheye"></a-sphere>
-      </a-entity>
-
-   
-      <a-cylinder
-        position="1 1 -2"
-        height="0.1"
-        radius="0.4"
-        color="FFD700"
-        src="#coinface"
-        metalness="0.9"
-        roughness="0.2"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 3000; easing: linear">
-
-      </a-cylinder>
 
       
     </a-scene>
